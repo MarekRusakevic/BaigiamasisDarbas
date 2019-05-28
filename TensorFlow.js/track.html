@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta content="text/javascript;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+
+	<script src="https://unpkg.com/@tensorflow/tfjs"></script>
+	<script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+	<script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components@latest/css/carbon-components.css" />
+  <link rel="stylesheet" href="/static/track.css">
+</head>
+
+<body class="bx--body p20">
+  <div class="mb10">
+    <button onclick="toggleVideo()" id="trackbutton" class="bx--btn bx--btn--secondary" type="button">
+      Toggle Video
+    </button>
+    <div id="updatenote" class="updatenote mt10"> loading model ..</div>
+  </div>
+  <video class="videobox canvasbox" autoplay="autoplay" id="myvideo"></video>
+
+  <canvas id="canvas_small" class="border canvasbox"></canvas>
+
+  <div class="mb10">
+
+    <canvas id="canvas_rez" width="150" height="150" class="border canvasbox2"></canvas>
+
+  </div>
+
+  <div class="mb10">
+
+    <button id="class-a" class="bx--btn bx--btn--secondary" type="button">
+        Add A
+    </button>
+
+    <button id="class-b" class="bx--btn bx--btn--secondary" type="button">
+        Add B
+    </button>
+
+    <button id="class-c" class="bx--btn bx--btn--secondary" type="button">
+        Add C
+    </button>
+
+  </div>
+
+  <div class="mb10">
+
+    <button id="class-save" class="bx--btn bx--btn--secondary" type="button">
+        Save
+    </button>
+
+    <button id="class-load" class="bx--btn bx--btn--secondary" type="button">
+        Load
+    </button>
+
+  </div>
+
+  <div id="console"></div>
+
+  <script src="https://unpkg.com/carbon-components@latest/scripts/carbon-components.js" type="text/javascript"></script>
+  <script src="/static/handtrack.js" type="text/javascript"></script>
+  <script src="/static/track.js" type="text/javascript"></script>
+  <script src="/static/train.js" type="text/javascript"></script>
+</body>
+
+</html>
